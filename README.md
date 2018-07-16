@@ -13,7 +13,7 @@ Note that not all functionality is being reimplemented.  For example, my `charCo
 
 String methods
 --------------
-`charAt` - returns the character at the specified index
-`charCodeAt` - returns the Unicode of the character at the specified index in a string
-`concat` - joins two or more strings
-`endsWith` - returns whether string ending matches input character(s)
+`charAt` - returns the character at the specified index<br>
+`charCodeAt` - returns the Unicode of the character at the specified index in a string<br>
+`concat` - joins two or more strings<br>
+`endsWith` - returns whether string ending matches input character(s)<br>
