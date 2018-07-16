@@ -1,5 +1,6 @@
 "use strict";
 
+// charCodeAt - returns the Unicode of the character at the specified index in a string
 // caveat:  Unlike the built in charCodeAt method, I am only including a tiny subset of the Unicode table.
 
 // Object representing a subset of the Basic Latin Unicode table

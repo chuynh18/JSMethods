@@ -1,5 +1,7 @@
 "use strict";
 
+// concat - joins two or more strings
+
 const concat = function() {
     let output = "";
     for (let i = 0; i < arguments.length; i++) {
