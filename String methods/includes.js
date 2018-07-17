@@ -5,9 +5,8 @@
 const string = "This is an example string.  It is very interesting.";
 
 const includes = function(input, substring) {
-    let match;
     for (let i = 0; i < input.length; i++) {
-        match = true;
+        let match = true;
         for (let j = 0; j < substring.length; j++) {
             if (input[i+j] !== substring[j]) {
                 match = false;

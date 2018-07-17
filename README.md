@@ -13,7 +13,12 @@ Note that not all functionality is being reimplemented.  For example, my `charCo
 
 String methods
 --------------
+_\* denotes partial implementation_<br>
 `charAt` - returns the character at the specified index<br>
-`charCodeAt` - returns the Unicode of the character at the specified index in a string<br>
+`charCodeAt`* - returns the Unicode value of the character at the specified index in a string.  Inverse of `fromCharCode`.<br>
 `concat` - joins two or more strings<br>
 `endsWith` - returns whether string ending matches input character(s)<br>
+`fromCharCode`* - returns the character corresponding to a given Unicode value.  Inverse of `charCodeAt`.<br>
+`includes` - returns whether a string contains a specified substring<br>
+`indexOf` - returns the position inside a string of the first occurence of a specified substring.  Returns -1 if the string doesn't contain the specified substring.<br>
+`lastIndexOf` - returns the position inside a string of the last occurence of a specified substring.  Returns -1 if the string doesn't contain the specified substring.<br>
