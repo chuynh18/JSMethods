@@ -1,7 +1,7 @@
 "use strict";
 
-// charCodeAt - returns the Unicode of the character at the specified index in a string
-// caveat:  Unlike the built in charCodeAt method, I am only including a tiny subset of the Unicode table.
+// fromCharCode - returns the character corresponding to a given Unicode value.
+// caveat:  Unlike the built in fromCharCode method, I am only including a tiny subset of the Unicode table.
 
 // Object representing a subset of the Basic Latin Unicode table
 const partialBasicLatin = [
@@ -102,34 +102,22 @@ const partialBasicLatin = [
     {code: 126, char: "~"}
 ];
 
-// example test string
-const string = "This is an example string. \\ It is very interesting. ¿1234?";
+// fromCharCode function
+const fromCharCode = function() {
+    let response = "";
 
-// charCodeAt function
-const charCodeAt = function(input, index) {
-    let matchFound = false;
-    let charCode;
-
-    // linear search
-    for (let i = 0; i < partialBasicLatin.length; i++) {
-        if (input[index] === partialBasicLatin[i].char) {
-            matchFound = true;
-            charCode = partialBasicLatin[i].code;
-            break;
+    for (let i = 0; i < arguments.length; i++) {
+        for (let j = 0; j < partialBasicLatin.length; j++) {
+            if (arguments[i] === partialBasicLatin[j].code) {
+                response += partialBasicLatin[j].char;
+                break;
+            };
         };
     };
 
-    if (matchFound) {
-        return charCode;
-    }
-    else {
-        return "No match found.";
-    };
+    return response;
 };
 
 // ================================================
 
-// using charCodeAt() on every character in the test string
-for (let i = 0; i < string.length; i++) {
-    console.log("input: ", string[i], ", char code: ", charCodeAt(string, i));
-};
+console.log(fromCharCode(72, 101, 108, 108, 111, 44, 32, 102, 114, 105, 101, 110, 100, 33)); // "Hello, friend!"

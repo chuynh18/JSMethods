@@ -1,5 +1,7 @@
 "use strict";
 
+// endsWith - returns whether string ending matches input character(s)
+
 const string = "This is an example string.  It is very interesting.";
 
 const endsWith = function(inputString, inputEnding, length) {
@@ -15,8 +17,8 @@ const endsWith = function(inputString, inputEnding, length) {
         if (inputString[i] !== inputEnding[i - startingIndex]) {
             match = false;
             break;
-        }
-    }
+        };
+    };
 
     return match;
 };
