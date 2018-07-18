@@ -6,6 +6,11 @@ tl;dr
 
 I'm reimplementing some of JavaScript's built in methods for fun.  Since these are functions, they won't be invoked with the same exact syntax, but their functionality should be very comparable.
 
+Execution
+---------
+
+These .js files can be run inside Node.js.  (No reason they shouldn't work in a browser context if you embed them into an HTML file and check out the console.)
+
 Caveats
 -------
 
@@ -14,6 +19,7 @@ Note that not all functionality is being reimplemented.  For example, my `charCo
 String methods
 --------------
 _\* denotes partial implementation_<br>
+_† denotes a method I skipped over_<br>
 `charAt` - returns the character at the specified index<br>
 `charCodeAt`* - returns the Unicode value of the character at the specified index in a string.  Inverse of `fromCharCode`.<br>
 `concat` - joins two or more strings<br>
@@ -22,3 +28,10 @@ _\* denotes partial implementation_<br>
 `includes` - returns whether a string contains a specified substring<br>
 `indexOf` - returns the position inside a string of the first occurence of a specified substring.  Returns -1 if the string doesn't contain the specified substring.<br>
 `lastIndexOf` - returns the position inside a string of the last occurence of a specified substring.  Returns -1 if the string doesn't contain the specified substring.<br>
+`localeCompare`† - _skipping for now_<br>
+`match`† - _skipping for now..._  I may tackle this at some point in the future.  I've been reading up on Thompson's construction and automata theory, then I might try writing a basic regex parser, though I doubt it will be complete.<br>
+`repeat` - returns a string that consists of a specified number of copies of the input string<br>
+`replace`* - searches a string for a specified value and returns a new string where the specified values have been replaced with an input string.  _No support for regular expressions._<br>
+`search`† - like `indexOf`, except it supports regex.  However, I am not writing a regex parser yet.<br>
+`slice` - returns the selected part of the input string as a new string<br>
+`split` - 
