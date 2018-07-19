@@ -4,41 +4,35 @@
 
 const string = "This is an example string.  It is very interesting.";
 
-/*
-Maybe there's a better way, but I'll explain the basic approach I took.
+/* Maybe there's a better way, but I'll explain the basic approach I took.
 
-First, I build an array that holds the indices of all matches.  This
-array also contains the additive inverse of the length of the search
-term as the first element, and the length of the input array as the
-last element.
+First, I build an array that holds the indices of all matches.  This array also contains the
+additive inverse of the length of the search term as the first element, and the length of the
+input array as the last element.
 
-This is because each consecutive pair of indices in this array is used
-to build out each substring that will go into the output array.
+This is because each consecutive pair of indices in this array is used to build out each
+substring that will go into the output array.
 
-I need the additive inverse of the length of the search term as the
-first element, because I will be adding the length of the search term
-back in as I build out each substring.  This is to ensure that the
-search term does not appear in any substring.
+I need the additive inverse of the length of the search term as the first element, because I
+will be adding the length of the search term back in as I build out each substring.  This is
+to ensure that the search term does not appear in any substring.
 
-Remember that the array of indices generally holds the first index of
-each match.  When we add the length of the search term back in, we're
-now pointing to the index immediately after the matching text.
+Remember that the array of indices generally holds the first index of each match.  When we
+add the length of the search term back in, we're now pointing to the index immediately after
+the matching text.
 
 There is some extra conditional logic to handle special cases.
 
-First, in the event that the search term is an empty string, we want
-our array of indices to start out empty.  This is because an empty
-search term will match at every index, so we'll have an extraneous
-element in our array of indices (specifically, an extra 0).
+First, in the event that the search term is an empty string, we want our array of indices to
+start out empty.  This is because an empty search term will match at every index, so we'll
+have an extraneous element in our array of indices (specifically, an extra 0).
 
-Next, we check to see if our array of indices is greater than 2.  This
-is because it being 2 implies that no matches were found against our
-search term, in which case, we want to return the input string inside
-an array.
+Next, we check to see if our array of indices is greater than 2.  This is because it being 2
+implies that no matches were found against our search term, in which case, we want to return
+the input string inside an array.
 
-Lastly, we check to see if the input is an empty string.  In the event
-that it is, we want to return an empty array.
-*/
+Lastly, we check to see if the input is an empty string.  In the event that it is, we want to
+return an empty array. */
 
 const split = function(input, search) {
     let indices = [-search.length];
