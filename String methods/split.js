@@ -105,4 +105,4 @@ testCases.forEach((index) => {
 // and for empty input...
 const builtIn = "".split("");
 const myOwn = split("", "");
-console.log("Did the built-in method agree with my reimplementation for empty string input? ", builtIn[0] === myOwn[0]);
+console.log("Did the built-in method agree with my reimplementation on empty string input? ", builtIn[0] === myOwn[0]);
