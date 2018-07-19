@@ -34,4 +34,4 @@ _† denotes a method I skipped over_<br>
 `replace`* - searches a string for a specified value and returns a new string where the specified values have been replaced with an input string.  _No support for regular expressions._<br>
 `search`† - like `indexOf`, except it supports regex.  However, I am not writing a regex parser yet.<br>
 `slice` - returns the selected part of the input string as a new string<br>
-`split` - 
+`split` - returns an array of substrings from a given string<br>
