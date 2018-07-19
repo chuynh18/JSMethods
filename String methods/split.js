@@ -95,7 +95,7 @@ const split = function(input, search) {
         };
 
         // Now we actually insert the substring into the array of substrings.
-            output[k] = splitArrayElement;
+        output[k] = splitArrayElement;
 
     };
     return output;
