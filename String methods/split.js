@@ -53,26 +53,42 @@ const split = function(input, search) {
 
 // ================================================
 
+let testPass = true;
 const builtIn0 = string.split(" ");
 const myOwn0 = split(string, " ");
 for (let i = 0; i < builtIn0.length; i++) {
-    console.log(builtIn0[i] === myOwn0[i]);
+    if (builtIn0[i] !== myOwn0[i]) {
+        testPass = false;
+    };
 };
+console.log(`Did the native method agree with my reimplementation on " "? `, testPass);
 
+testPass = true;
 const builtIn1 = string.split("");
 const myOwn1 = split(string, "");
 for (let i = 0; i < builtIn1.length; i++) {
-    console.log(builtIn1[i] === myOwn1[i]);
+    if (builtIn1[i] !== myOwn1[i]) {
+        testPass = false;
+    };
 };
+console.log(`Did the native method agree with my reimplementation on ""? `, testPass);
 
+testPass = true;
 const builtIn2 = string.split("is");
 const myOwn2 = split(string, "is");
 for (let i = 0; i < builtIn2.length; i++) {
-    console.log(builtIn2[i] === myOwn2[i]);
+    if (builtIn2[i] !== myOwn2[i]) {
+        testPass = false;
+    };
 };
+console.log(`Did the native method agree with my reimplementation on "is"? `, testPass);
 
+testPass = true;
 const builtIn3 = string.split("This isn't gonna find anything at all!");
 const myOwn3 = split(string, "This isn't gonna find anything at all!");
 for (let i = 0; i < builtIn3.length; i++) {
-    console.log(builtIn3[i] === myOwn3[i]);
+    if (builtIn3[i] !== myOwn3[i]) {
+        testPass = false;
+    };
 };
+console.log(`Did the native method agree with my reimplementation on "This isn't gonna find anything at all!"? `, testPass);
