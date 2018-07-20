@@ -7,6 +7,11 @@ const string = "This is an example string.  It is very interesting.";
 const substring = function(input, startIndex, endIndex) {
     let output = "";
 
+    // negative startIndex means startIndex is 0
+    if (startIndex < 0) {
+        startIndex = 0;
+    };
+
     // no endIndex means endIndex is the length of the input
     if (endIndex === 0) {}
     else if (!endIndex) {
@@ -38,5 +43,9 @@ const substring = function(input, startIndex, endIndex) {
 
 console.log(substring(string, 0) === string.substring(0));
 console.log(substring(string, 0, 0) === string.substring(0, 0));
+console.log(substring(string, 0, 420) === string.substring(0, 420));
 console.log(substring(string, 10, 5) === string.substring(10, 5));
 console.log(substring(string, 420) === string.substring(420));
+console.log(substring(string, 420, 5) === string.substring(420, 5));
+console.log(substring(string, -420) === string.substring(-420));
+console.log(substring(string, -420, 5) === string.substring(-420, 5));
