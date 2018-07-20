@@ -19,7 +19,7 @@ const trim = function(input) {
         };
     };
 
-    for (let i = indices[0]; i < indices[1] + 1; i++) {
+    for (let i = indices[0]; i <= indices[1]; i++) {
         output += input[i];
     };
 
