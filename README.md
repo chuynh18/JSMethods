@@ -35,3 +35,5 @@ _† denotes a method I skipped over_<br>
 `search`† - like `indexOf`, except it supports regex.  However, I am not writing a regex parser yet.<br>
 `slice` - returns the selected part of the input string as a new string<br>
 `split` - returns an array of substrings from a given string<br>
+`startsWith` - returns whether string beginning matches input character(s)<br>
+`substr` - extracts a substring from a string and returns it
