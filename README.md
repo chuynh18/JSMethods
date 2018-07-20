@@ -19,7 +19,7 @@ Note that not all functionality is being reimplemented.  For example, my `charCo
 String methods
 --------------
 _\* denotes partial implementation_<br>
-_† denotes a method I skipped over_<br>
+_† not implemented_<br>
 `charAt` - returns the character at the specified index<br>
 `charCodeAt`* - returns the Unicode value of the character at the specified index in a string.  Inverse of `fromCharCode`.<br>
 `concat` - joins two or more strings<br>
@@ -38,3 +38,7 @@ _† denotes a method I skipped over_<br>
 `startsWith` - returns whether string beginning matches input character(s)<br>
 `substr` - extracts a substring from a string and returns it<br>
 `substring` - extracts a substring between two specified indices and returns it<br>
+`toLocaleLowerCase`† - skipping, see toLowerCase<br>
+`toLocaleUpperCase`† - skipping, see toUpperCase<br>
+`toLowerCase`* - converts a string to lowercase letters.  Only handling letters of the English alphabet.
+`toUpperCase`* - converts a string to uppercase letters.  Only handling letters of the English alphabet.
