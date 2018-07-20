@@ -13,6 +13,7 @@ const substring = function(input, startIndex, endIndex) {
         endIndex = input.length;
     };
 
+    // floor our numerical inputs to match JavaScript substr behavior
     [startIndex, endIndex] = [Math.floor(startIndex), Math.floor(endIndex)];
     
     // if startIndex is greater than endIndex, swap them
