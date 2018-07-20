@@ -36,4 +36,5 @@ _† denotes a method I skipped over_<br>
 `slice` - returns the selected part of the input string as a new string<br>
 `split` - returns an array of substrings from a given string<br>
 `startsWith` - returns whether string beginning matches input character(s)<br>
-`substr` - extracts a substring from a string and returns it
+`substr` - extracts a substring from a string and returns it<br>
+`substring` - extracts a substring between two specified indices and returns it<br>
