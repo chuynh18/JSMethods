@@ -107,12 +107,17 @@ const fromCharCode = function() {
     let response = "";
 
     for (let i = 0; i < arguments.length; i++) {
-        for (let j = 0; j < partialBasicLatin.length; j++) {
-            if (arguments[i] === partialBasicLatin[j].code) {
-                response += partialBasicLatin[j].char;
-                break;
-            };
-        };
+
+        // // the standard way to do things... a linear search
+        // for (let j = 0; j < partialBasicLatin.length; j++) {
+        //     if (arguments[i] === partialBasicLatin[j].code) {
+        //         response += partialBasicLatin[j].char;
+        //         break;
+        //     };
+        // };
+
+        // faster; just taking advantage of constant offset, but specific to the lookup table
+        response += partialBasicLatin[arguments[i] - 32].char;
     };
 
     return response;
