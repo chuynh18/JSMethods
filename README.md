@@ -40,5 +40,6 @@ _† not implemented_<br>
 `substring` - extracts a substring between two specified indices and returns it<br>
 `toLocaleLowerCase`† - skipping, see toLowerCase<br>
 `toLocaleUpperCase`† - skipping, see toUpperCase<br>
-`toLowerCase`* - converts a string to lowercase letters.  Only handling letters of the English alphabet.
-`toUpperCase`* - converts a string to uppercase letters.  Only handling letters of the English alphabet.
+`toLowerCase`* - converts a string to lowercase letters.  Only handling letters of the English alphabet.<br>
+`toUpperCase`* - converts a string to uppercase letters.  Only handling letters of the English alphabet.<br>
+`trim` - given an input string, removes leading and trailing whitespaces, then returns a new string<br>
