@@ -55,6 +55,7 @@ const substr = function(input, startingIndex, length) {
 console.log(substr("", 0) === "".substr(0));
 console.log(substr(string, 0) === string.substr(0));
 console.log(substr(string, -5, 3.1) === string.substr(-5, 3.1));
+console.log(substr(string, "-5a", "3.1b") === string.substr("-5a", "3.1b"));
 console.log(substr(string, -13) === string.substr(-13));
 console.log(substr(string, -123) === string.substr(-123));
 console.log(substr(string, 0, 420) === string.substr(0, 420));

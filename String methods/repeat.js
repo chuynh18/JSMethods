@@ -10,7 +10,7 @@ const repeat = function(input, repetitions) {
         return "";
     }
     else {
-        for (let i = 0; i < Math.floor(repetitions); i++) {
+        for (let i = 0; i < parseInt(repetitions); i++) {
             output += input;
         };
 
