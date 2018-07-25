@@ -7,6 +7,10 @@ const array = [0, 1, 2, 3, 4, 5];
 const copyWithin = function(input, target, start, end) {
     let output = [];
 
+    if (start === undefined) {
+        start = 0;
+    }
+
     if (end > input.length || end === undefined) {
         end = input.length;
     };
